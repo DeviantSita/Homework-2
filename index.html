@@ -5,22 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>[IS 445] Homework 2</title>
-
+    
     <style>
-        body {font-family: Arial; 
+    body {font-family: Arial, Helvetica, sans-serif; 
             text-align: center;
             font-size:12px;
         }
+    
+    /* Container for flexboxes */
+    section {
+        display: -webkit-flex;
+        display: flex;
+    }
+
+    /* Style list box */
+    nav {
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        background: rgb(255, 239, 208);
+        /* padding: 5px; */
+    }
+
+    /* Style list inside box */
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    /* Style box content */
+    article {
+        -webkit-flex: 3;
+        -ms-flex: 3;
+        flex: 3;
+        background-color: rgb(255, 219, 153);
+        /* padding: 10px; */
+        text-align: left;
+    }
+
+    /* Responsive layout = makes boxes stack on top of each other
+        rather than next to each other */
+    @media (max-width: 900px) {
+        section {
+            -webkit-flex-direction: column;
+            flex-direction: column;
+        }
+    } 
     </style>
 </head>
 
 <body>
     <p style="font-size:16px;"><strong>Ta, Christina</strong></p>
-    <p style="color:green;">__________________________________</p>
+    <p style="color:green;"><strong>___________________________</strong></p>
     <p><i>Welcome to IS445 Homework 2!</i></p>
-    <!-- <p style="font-size:30px;">Hewwo?</p> -->
     <img src="https://66.media.tumblr.com/795b37b4d876901e4d0d17dd2d62cb59/tumblr_inline_pidmjzLYEv1w57771_500.jpg" 
         alt="Cute doggo" width="300" height="450">
+<section>
+    <article>
+        <p style="text-align:center;">About Me</p>
+        <p><b><i><u>Education</u></i></b>
+        <br>2019, Bachelor of MIS, CSULB</p>
 
+        <p><b><i><u>Skills</u></i></b>
+            <nav>
+                <ol>
+                    <li>Programming: SQL, CSS, HTML, Python</li>
+                    <li>Empathetic and team-oriented</li>
+                    <li>Artistic</li>
+                </ol>
+            </nav>
+        </p>
+
+        <article>
+            <p style="text-align:center;">Contact Me</p>
+        </article>
+    </article>
+</section>
 </body>
 </html>
