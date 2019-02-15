@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    }
+
+body {font-family: Arial, Helvetica, sans-serif; 
+        text-align: center;
+        font-size:12px;
+        width: 900px;
+    }
+
+/* Style green dividing line */
+hr { 
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+    color: green;
+    background-color: green;
+    height: 2px;
+    width: 65%;
+    } 
+
+#title {
+    text-align: center;
+}
+
+/* Style headers in flexboxes */
+h1 {
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    line-height: normal;
+}
+
+/* Container for flexboxes */
+section {
+    display: -webkit-flex;
+    display: flex;
+    /* Spacing before flexboxes */
+    padding-block-start: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+
+/* Style box content */
+article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    border: 3px solid rgb(214, 0, 0);
+    /* Pads content inside box: top/bottom and left/right */
+    padding: 5px 10px;
+}
+
+/* Responsive layout = makes boxes stack on top of each other
+    rather than next to each other */
+@media (max-width: 900px) {
+    section {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+/* CSS for Contact Me box */
+input[type=text], select, textarea {
+    /* Input-text box width */
+    width: 100%;
+    /* Padding around placeholder text */
+    padding: 5px;
+    /* Input-text box borders */
+    border: 1px solid rgb(143, 143, 143);
+    /* Rounds corners of input-text box */
+    border-radius: 3pwhwx;
+    box-sizing: border-box;
+    /* Margins above and below each input-text box */
+    margin-top: 1px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+input[type=submit] {
+    /* Button color */
+    background-color: rgb(101, 172, 91);
+    /* Button text color */
+    color: white;
+    /* Button padding: top/bottom and right/left */
+    padding: 4px 30px;
+    border: none;
+    /* Rounds out the button shape */
+    border-radius: 6px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    /* Button hover-over color */
+    background-color: green;
+}
+.container {
+    /* Rounds out container */
+    border-radius: 5px;
+    border: 1.5px solid grey;
+    background-color: rgb(250, 250, 250);
+    /* Container spacing */
+    padding: 20px;
+}
